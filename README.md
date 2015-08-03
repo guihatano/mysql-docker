@@ -4,7 +4,18 @@ Git repo for Dockerfiles and scripts for MySQL
 MySQL Server based on Ubuntu 14.04
 
 Example usage: 
-     `$ docker run --name mysql -v /tmp/mysqldata:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d guihatano/mysql`
+     `$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d guihatano/mysql:tag`
+
+Using volume:
+     `$ docker run --name mysql -v /my/own/datadir:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d guihatano/mysql:tag`
+
+where `mysql` is the name you want to assign to your container, `my-secret-pw` is the password to be set for the MySQL root user and `tag` is the tag specifying the MySQL version you want.
+
+Supported tags:
+---------------------
+
+ - `5.5`
+ - `5.6` and `latest`
 
 Environment variables
 ---------------------
