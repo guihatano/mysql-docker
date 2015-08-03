@@ -11,7 +11,7 @@ RUN groupadd -r mysql && useradd -r -g mysql mysql
 # Data::Dumper
 #RUN apt-get update && apt-get install -y perl --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
-ENV MYSQL_VERSION 5.6
+ENV MYSQL_VERSION 5.5
 
 # Just to avoid "debconf: unable to initialize frontend: Dialog" 
 ENV DEBIAN_FRONTEND noninteractive

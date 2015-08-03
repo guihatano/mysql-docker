@@ -9,7 +9,7 @@ Example usage:
 Environment variables
 ---------------------
 
-The environment variable is the same of official repo:
+The environment variables are the same of official repo:
 
  - `MYSQL_ROOT_PASSWORD`: This variable is mandatory and specifies the password that will be set for the MySQL `root` superuser account. In the above example, it was set to `my-secret-pw`.
  - `MYSQL_DATABASE`: A database to automatically create. If not provided, does not create a database.
