@@ -1,16 +1,6 @@
 FROM ubuntu:14.04
 MAINTAINER guihatano
 
-# add our user and group first to make sure their IDs get assigned consistently, regardless of whatever dependencies get added
-RUN groupadd -r mysql && useradd -r -g mysql mysql
-
-# FATAL ERROR: please install the following Perl modules before executing /usr/local/mysql/scripts/mysql_install_db:
-# File::Basename
-# File::Copy
-# Sys::Hostname
-# Data::Dumper
-#RUN apt-get update && apt-get install -y perl --no-install-recommends && rm -rf /var/lib/apt/lists/*
-
 ENV MYSQL_VERSION 5.6
 
 # Just to avoid "debconf: unable to initialize frontend: Dialog" 
