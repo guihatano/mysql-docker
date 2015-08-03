@@ -11,7 +11,7 @@ Using volume:
 
 where `mysql` is the name you want to assign to your container, `my-secret-pw` is the password to be set for the MySQL root user and `tag` is the tag specifying the MySQL version you want.
 
-Supported tags:
+Supported tags
 ---------------------
 
  - `5.5`
