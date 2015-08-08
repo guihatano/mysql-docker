@@ -1,7 +1,7 @@
 # mysql-docker
 Git repo for Dockerfiles and scripts for MySQL Server based on Ubuntu 14.04
 
-It's a modification of official repo.
+It's a modification of the official repo.
 
 Example usage: 
      `$ docker run --name mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d guihatano/mysql:tag`
