@@ -37,8 +37,6 @@ if [ "$1" = 'mysqld' ]; then
         		cp /etc/mysql/my.cnf /usr/share/mysql/my-default.cnf
     		fi
 		echo 'Running mysql_install_db'
-
-		#mysql_install_db --user=mysql --datadir="$DATADIR" --rpm --keep-my-cnf
 		mysql_install_db --user=mysql --datadir="$DATADIR" --rpm
 		echo 'Finished mysql_install_db'
 
