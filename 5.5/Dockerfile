@@ -16,6 +16,10 @@ RUN apt-get update \
 # comment out a few problematic configuration values
 RUN sed -Ei 's/^(bind-address|log)/#&/' /etc/mysql/my.cnf
 
+# replaces deprecated options
+RUN sed -Ei 's/key_buffer/key_buffer_size/' /etc/mysql/my.cnf \
+        && sed -Ei 's/myisam-recover/myisam-recover-options/' /etc/mysql/my.cnf
+
 VOLUME /var/lib/mysql
 
 COPY docker-entrypoint.sh /entrypoint.sh
