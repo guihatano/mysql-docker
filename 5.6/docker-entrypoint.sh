@@ -37,10 +37,10 @@ if [ "$1" = 'mysqld' ]; then
         		cp /etc/mysql/my.cnf /usr/share/mysql/my-default.cnf
     		fi
 		echo 'Running mysql_install_db'
-		mysql_install_db --user=mysql --datadir="$DATADIR" --rpm
+		mysql_install_db --user=mysql --datadir="$DATADIR" --rpm --explicit_defaults_for_timestamp=TRUE
 		echo 'Finished mysql_install_db'
 
-		mysqld --user=mysql --datadir="$DATADIR" --skip-networking &
+		mysqld --user=mysql --datadir="$DATADIR" --skip-networking --explicit_defaults_for_timestamp=TRUE &
 		for i in $(seq 30 -1 0); do
 			[ -S "$SOCKET" ] && break
 			echo 'MySQL init process in progress...'
